@@ -14,14 +14,12 @@ Display::Display(std::string const& initialText)
 
 void Display::updateText(std::string const& newText)
 {
-    // TODO
+    this->text = newText;
 }
 
 std::string Display::getText() const
 {
-    // TODO
-
-    return "";
+    return this->text;
 }
 
 void Display::show() const
@@ -29,7 +27,9 @@ void Display::show() const
     // TODO
 
     // Geben Sie das Ergebnis von `getText()` auf der Konsole aus.
+    std::cout << this->text << std::endl;
 
+    
     // Anmerkung: In einer echten Anwendung würde hier wahrscheinlich
     // eine grafische Benutzeroberfläche oder ein physisches Display
     // angesprochen werden, um den Text anzuzeigen.

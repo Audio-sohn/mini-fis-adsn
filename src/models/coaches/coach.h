@@ -20,7 +20,7 @@ struct Coach {
 
     /// Fügt ein Decken-Display hinzu.
     void addCeilingDisplay(Display const& display);
-
+    
     /// Fügt ein Sitzplatz-Display hinzu.
     void addSeatDisplay(std::string const& seatId, Display const& display);
 
