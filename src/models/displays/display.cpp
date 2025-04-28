@@ -14,7 +14,7 @@ Display::Display(std::string const& initialText)
 
 void Display::updateText(std::string const& newText)
 {
-    this->text = newText;
+    text = newText;
 }
 
 std::string Display::getText() const
