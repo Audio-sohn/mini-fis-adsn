@@ -29,7 +29,14 @@ void Coach::updateCeilingDisplays(std::string const& newText)
 
 void Coach::updateSeatDisplay(std::string const& seatId, std::string const& newText)
 {
-    this->seat_displays.insert_or_assign(seatId, newText);
+    for (auto &[id, text] : seat_displays)
+    {
+        if (id == seatId)
+        {
+            text = newText;
+        }
+
+    }
 }
 
 void Coach::showCeilingDisplays() const

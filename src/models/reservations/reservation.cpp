@@ -8,14 +8,13 @@ Reservation::Reservation(std::string const& from, std::string const& to)
 
 bool Reservation::isEmpty() const
 {
-    // TODO
-
-    return false;
+    return from.empty() && to.empty() ;
 }
 
 std::string Reservation::getDisplayText() const
 {
-    // TODO
+    /// Liefert den Anzeigetext für die Reservierung zurück.
+    /// Der Text hat das Format "<from> - <to>".
 
-    return "";
+    return from + " - " + to;
 }

@@ -4,6 +4,17 @@
 
 void insert_reservation(Reservation const& reservation, std::vector<Reservation>& reservations, std::vector<std::string> const& stops)
 {
+    /// Fügt eine Reservierung in eine Liste bestehender Reservierungen ein.
+    /// Erwartet die Reservierung und die Liste der bisherigen Reservierungen
+    /// sowie eine Liste von Haltestellen.
+    /// Die Liste der Reservierungen wird so sortiert, dass die Reihenfolge der Start-Orte
+    /// und Ziel-Orte der Reihenfolge der Haltestellen entspricht.
+    /// Sollte dies nicht möglich sein, wird die Reservierung nicht hinzugefügt
+    /// und die liste der Reservierungen bleibt unverändert.
+    
+    
+
+
     // TODO
 }
 
