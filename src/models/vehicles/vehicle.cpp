@@ -20,45 +20,9 @@ void Vehicle::addStop(std::string const& stop)
 
 void Vehicle::addReservation(size_t coachIndex, std::string const& seatId, Reservation const& reservation)
 {
-    // check if stop order is right
-    // reservation stops and starts should be in route
-    // start should be BEFORE stop
 
-    if (reservation.from == reservation.to) 
-    {
-        return;
-    }
+    insert_reservation(reservation, reservations[coachIndex][seatId], route);
 
-    int startPos = -1; 
-    int endPos = -1;
-
-    // iterate through route and find the reservations
-    for (size_t i = 0; i < route.size(); i++) 
-    {
-        if (route[i] == reservation.from)
-        {    
-            startPos = static_cast<int>(i);
-        }
-
-        if (route[i] == reservation.to)
-        {
-            endPos = static_cast<int>(i);
-        }
-
-        // check if reservation stops are not being found
-        // check if reservation.to is before reservation.from
-        if ((startPos > endPos) || startPos == -1 || endPos == -1) 
-        {
-            // add seat to reservations but leave reservations empty
-            reservations[coachIndex].insert({seatId, {}});
-            return;
-        }
-
-    }
-
-
-    // if all is well, then add reservation
-    reservations[coachIndex].insert({seatId, {reservation}});
 }
 
 void Vehicle::showAllDisplays() const
